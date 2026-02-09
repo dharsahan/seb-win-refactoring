@@ -120,6 +120,9 @@ namespace SafeExamBrowser.Configuration.ConfigurationData.DataMapping
 				case Keys.Browser.MainWindow.AllowReload:
 					MapAllowReload(settings, value);
 					break;
+				case Keys.Browser.MainWindow.AllowResize:
+					MapAllowResize(settings, value);
+					break;
 				case Keys.Browser.MainWindow.ShowReloadWarning:
 					MapShowReloadWarning(settings, value);
 					break;
@@ -291,6 +294,14 @@ namespace SafeExamBrowser.Configuration.ConfigurationData.DataMapping
 			if (value is bool allow)
 			{
 				settings.Browser.MainWindow.AllowReloading = allow;
+			}
+		}
+
+		private void MapAllowResize(AppSettings settings, object value)
+		{
+			if (value is bool allow)
+			{
+				settings.Browser.MainWindow.AllowResize = allow;
 			}
 		}
 

@@ -109,6 +109,7 @@ namespace SafeExamBrowser.Configuration.ConfigurationData
 				internal const string AllowAddressBar = "browserWindowAllowAddressBar";
 				internal const string AllowNavigation = "allowBrowsingBackForward";
 				internal const string AllowReload = "browserWindowAllowReload";
+				internal const string AllowResize = "allowWindowResize";
 				internal const string ShowReloadWarning = "showReloadWarning";
 				internal const string UrlPolicy = "browserWindowShowURL";
 				internal const string WindowHeight = "mainBrowserWindowHeight";
