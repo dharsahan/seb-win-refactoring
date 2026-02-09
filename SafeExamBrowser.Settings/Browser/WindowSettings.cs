@@ -57,6 +57,12 @@ namespace SafeExamBrowser.Settings.Browser
 		public bool FullScreenMode { get; set; }
 
 		/// <summary>
+		/// Determines whether the user will be allowed to resize the browser window in fullscreen mode.
+		/// When enabled, the fullscreen window retains its dimensions but allows resizing and shows the window frame.
+		/// </summary>
+		public bool AllowResize { get; set; }
+
+		/// <summary>
 		/// Determines the initial position of the browser window (if it is not maximized).
 		/// </summary>
 		public WindowPosition Position { get; set; }

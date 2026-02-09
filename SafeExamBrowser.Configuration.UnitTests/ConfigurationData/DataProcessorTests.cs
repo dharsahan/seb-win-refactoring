@@ -97,5 +97,25 @@ namespace SafeExamBrowser.Configuration.UnitTests.ConfigurationData
 			Assert.AreEqual(1, settings.Applications.Whitelist.Count);
 			Assert.AreSame(firefox, settings.Applications.Whitelist[0]);
 		}
+
+		[TestMethod]
+		public void MustMapAllowResizeForMainWindow()
+		{
+			var raw = new Dictionary<string, object>();
+			var settings = new AppSettings();
+
+			raw.Add(Keys.Browser.MainWindow.AllowResize, true);
+			settings.Browser.MainWindow.AllowResize = false;
+
+			sut.Process(raw, settings);
+
+			Assert.IsTrue(settings.Browser.MainWindow.AllowResize);
+
+			raw[Keys.Browser.MainWindow.AllowResize] = false;
+
+			sut.Process(raw, settings);
+
+			Assert.IsFalse(settings.Browser.MainWindow.AllowResize);
+		}
 	}
 }
